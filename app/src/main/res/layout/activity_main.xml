@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:hapticFeedbackEnabled="true"
+    tools:context="com.devwithbensmith.irapp.MainActivity">
+
+    <Button
+        android:text="power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:id="@+id/power"
+        android:onClick="power" />
+
+    <Button
+        android:text="Channel Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/channelUp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/channelDown"
+        android:layout_marginTop="106dp"
+        android:layout_alignEnd="@+id/channelDown"
+        android:onClick="channelUp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/channelDown"
+        android:layout_alignStart="@+id/volUp"
+        android:id="@+id/volDown"
+        android:text="Volume Down"
+        android:layout_alignTop="@+id/channelDown"
+        android:layout_alignEnd="@+id/volUp"
+        android:onClick="volumeDown"/>
+
+    <Button
+        android:text="Channel Down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/channelDown"
+        android:layout_marginTop="108dp"
+        android:layout_below="@+id/channelUp"
+        android:layout_toStartOf="@+id/power"
+        android:onClick="channelDown" />
+
+    <Button
+        android:text="Volume Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/volUp"
+        android:layout_alignBaseline="@+id/channelUp"
+        android:layout_alignBottom="@+id/channelUp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:onClick="volumeUp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/volUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/statusText" />
+
+    <Button
+        android:text="source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/source"
+        android:layout_marginStart="12dp"
+        android:layout_above="@+id/power"
+        android:layout_alignParentStart="true"
+        android:onClick="source" />
+
+    <Button
+        android:text="mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mute"
+        android:layout_above="@+id/power"
+        android:layout_alignParentEnd="true"
+        android:onClick="mute" />
+
+</RelativeLayout>
